@@ -1,0 +1,185 @@
+/* --- તમારું જૂનું બધું જ CSS અહીં આવશે --- */
+
+.home-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.home-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin-left: 8%;
+  padding: 55px;
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(20, 20, 20, 0.75));
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(255, 183, 3, 0.06);
+  animation: fadeUp 0.9s ease-out;
+}
+
+.home-tag {
+  color: #ffb703;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.home-wrapper h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin: 20px 0;
+}
+
+.home-wrapper h1 span {
+  background: linear-gradient(90deg, #ffffff, #ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-wrapper p {
+  color: #ddd;
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.home-buttons button {
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-buttons .primary {
+  background: #ffb703;
+  border: none;
+  color: #000;
+}
+
+.home-buttons .primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 183, 3, 0.45);
+}
+
+.home-buttons .secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.home-buttons .secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Category Wrapper & Cards */
+.category-card-wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 60px 8%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-card {
+  position: relative;
+  min-width: 240px;
+  height: 150px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: 0.4s ease;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.category-overlay h2 {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.category-card.active {
+  border: 1px solid rgba(255, 183, 3, 0.6);
+}
+
+.category-card.active .category-overlay h2 {
+  color: #ffb703;
+}
+
+/* ================= SCROLL TO TOP DESIGN ================= */
+.scroll-wrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  background: rgba(0, 0, 0, 0.8); /* Dark Glass Effect */
+  backdrop-filter: blur(10px);
+  border: 2px solid #ffb703; /* Gold Border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Creating Arrow using CSS */
+.arrow-up {
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #ffb703; /* Gold Arrow Color */
+  border-left: 3px solid #ffb703;
+  transform: rotate(45deg);
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+/* Hover Effects */
+.scroll-wrapper:hover {
+  background: #ffb703; /* હોવર પર બેકગ્રાઉન્ડ આખું ગોલ્ડ થઈ જશે */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 183, 3, 0.5);
+}
+
+.scroll-wrapper:hover .arrow-up {
+  border-top: 3px solid #000; /* ગોલ્ડ બેકગ્રાઉન્ડ પર એરો કાળો થઈ જશે */
+  border-left: 3px solid #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-wrapper {
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+  }
+}

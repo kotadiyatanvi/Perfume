@@ -1,0 +1,169 @@
+.contact-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Background */
+  .contact-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  
+  .contact-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px) brightness(0.35) contrast(1.1);
+    transform: scale(1.1);
+  }
+  
+  /* Glass Wrapper */
+  .contact-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    padding: 45px;
+    border-radius: 20px;
+    color: #fff;
+  
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65),
+      rgba(20, 20, 20, 0.75)
+    );
+  
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 183, 3, 0.25);
+  
+    box-shadow:
+      0 30px 90px rgba(0, 0, 0, 0.7),
+      inset 0 0 30px rgba(255, 183, 3, 0.05);
+  
+    animation: fadeUp 0.8s ease-out;
+  }
+  
+  /* Tag */
+  .contact-tag {
+    color: #ffb703;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  
+  /* Heading */
+  .contact-wrapper h1 {
+    font-size: 2.5rem;
+    margin: 15px 0 10px;
+  
+    background: linear-gradient(90deg, #ffffff, #ffb703);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Text */
+  .contact-wrapper p {
+    color: #ddd;
+    margin-bottom: 25px;
+  }
+  
+  /* Form Inputs */
+  .contact-wrapper input,
+  .contact-wrapper textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .contact-wrapper textarea {
+    resize: none;
+    height: 110px;
+  }
+  
+  .contact-wrapper input::placeholder,
+  .contact-wrapper textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Focus Glow */
+  .contact-wrapper input:focus,
+  .contact-wrapper textarea:focus {
+    border-color: #ffb703;
+    box-shadow: 0 0 0 2px rgba(255, 183, 3, 0.25);
+  }
+  
+  /* Button */
+  .contact-wrapper button {
+    width: 100%;
+    padding: 14px;
+    background: #ffb703;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  /* Button shine */
+  .contact-wrapper button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+    transform: translateX(-100%);
+  }
+  
+  .contact-wrapper button:hover::after {
+    transform: translateX(100%);
+    transition: 0.6s;
+  }
+  
+  .contact-wrapper button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 183, 3, 0.4);
+  }
+  
+  /* Animation */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      padding: 30px;
+    }
+  
+    .contact-wrapper h1 {
+      font-size: 2rem;
+    }
+  }
+  

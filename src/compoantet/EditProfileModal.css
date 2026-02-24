@@ -1,0 +1,153 @@
+/* Overlay dims background with smooth fade */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+/* Modal box: rounded, shadowed, subtle gradient background */
+.modal-box.modern {
+  width: 420px;
+  background: linear-gradient(145deg, #1e293b, #162032);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 24px 30px;
+  color: #f1f5f9; /* light text */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+/* Header flex: title + close button */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.modal-header h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #fbbf24; /* warm yellow highlight */
+  text-transform: uppercase;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 22px;
+  color: #f87171; /* soft red */
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+/* Form groups vertical stack */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #94a3b8; /* soft gray */
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+
+/* Inputs: dark theme, subtle glow on focus */
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1.8px solid #334155;
+  background: #0f172a;
+  color: #f8fafc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.form-group input[disabled] {
+  background: #1e293b;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 8px #fbbf24aa;
+}
+
+/* Error text styling */
+.error-text {
+  color: #f87171;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Buttons container */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Primary button: bright yellow */
+.btn-primary {
+  background: #fbbf24;
+  color: #1e293b;
+  font-weight: 700;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  min-width: 110px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #eab308;
+}
+
+/* Outline button: transparent with border */
+.btn-outline {
+  background: transparent;
+  border: 2px solid #64748b;
+  color: #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 110px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-outline:hover:not(:disabled) {
+  border-color: #fbbf24;
+  color: #fbbf24;
+}
+
+/* Disabled buttons */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,179 @@
+/* ManageUsers.css */
+.manage-users-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.admin-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.admin-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px) brightness(0.25);
+}
+
+.admin-glass-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    max-width: 1300px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 183, 3, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.admin-tag {
+    color: #ffb703;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.admin-header h1 {
+    color: #fff;
+    margin: 5px 0 0 0;
+}
+
+.refresh-btn-gold {
+    background: #ffb703;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.refresh-btn-gold:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.luxury-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ccc;
+}
+
+.luxury-table th {
+    text-align: left;
+    padding: 15px;
+    color: #ffb703;
+    border-bottom: 2px solid rgba(255, 183, 3, 0.3);
+    font-size: 0.9rem;
+}
+
+.luxury-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-name-cell {
+    color: #fff;
+    font-weight: 600;
+}
+
+.id-cell {
+    color: #888;
+    font-family: monospace;
+}
+
+/* Role Badges */
+.role-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.role-badge.admin {
+    background: rgba(255, 183, 3, 0.2);
+    color: #ffb703;
+    border: 1px solid #ffb703;
+}
+
+.role-badge.user {
+    background: rgba(0, 150, 255, 0.2);
+    color: #0096ff;
+    border: 1px solid #0096ff;
+}
+
+.otp-text {
+    font-weight: bold;
+    color: #f1c27d;
+    letter-spacing: 1px;
+}
+
+.password-cell {
+    letter-spacing: 3px;
+    color: #666;
+}
+
+.luxury-table tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 900px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}/* Add this to your existing ManageUsers.css */
+
+.delete-cross-btn {
+    background: transparent;
+    color: rgba(255, 77, 77, 0.6); /* Soft red by default */
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.delete-cross-btn:hover {
+    background: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+    transform: rotate(90deg) scale(1.1); /* Hover પર ફરશે અને મોટું થશે */
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+}
+
+/* Ensure the action column header is centered */
+.luxury-table th:last-child {
+    text-align: center;
+}

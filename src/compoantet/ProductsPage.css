@@ -1,0 +1,392 @@
+/* ProductsPage.css */
+.scroll-wrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  background: rgba(0, 0, 0, 0.8); /* Dark Glass Effect */
+  backdrop-filter: blur(10px);
+  border: 2px solid #ffb703; /* Gold Border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Creating Arrow using CSS */
+.arrow-up {
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #ffb703; /* Gold Arrow Color */
+  border-left: 3px solid #ffb703;
+  transform: rotate(45deg);
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+/* Hover Effects */
+.scroll-wrapper:hover {
+  background: #ffb703; /* Background turns gold */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 183, 3, 0.5);
+}
+
+.scroll-wrapper:hover .arrow-up {
+  border-top: 3px solid #000; /* Arrow turns black on hover */
+  border-left: 3px solid #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-wrapper {
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+  }
+}
+.home-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.home-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px) brightness(0.35) contrast(1.1);
+  transform: scale(1.1);
+}
+
+.home-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin-left: 8%;
+  padding: 55px;
+  border-radius: 24px;
+  color: #fff;
+  background:transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(255, 183, 3, 0.06);
+  animation: fadeUp 0.9s ease-out;
+}
+
+.home-tag {
+  color: #ffb703;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.home-wrapper h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 20px 0;
+}
+
+.home-wrapper h1 span {
+  background: linear-gradient(90deg, #ffffff, #ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-wrapper p {
+  color: #ddd;
+  font-size: 1.05rem;
+  max-width: 520px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.category-card-wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 60px 8%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ProductsPage.css - Sharp UI with Scroll Arrow */
+
+.home-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.home-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:transparent;
+}
+
+.home-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin-left: 8%;
+  padding: 55px;
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.85));
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
+  animation: fadeUp 0.9s ease-out;
+}
+
+.home-tag {
+  color: #ffb703;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.home-wrapper h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 20px 0;
+}
+
+.home-wrapper h1 span {
+  background: linear-gradient(90deg, #ffffff, #ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-wrapper p {
+  color: #ddd;
+  font-size: 1.05rem;
+  max-width: 520px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CATEGORY SECTION (SHARP IMAGES) --- */
+.category-card-wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 60px 8%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.category-card {
+  position: relative;
+  width: 360px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #111; /* Dark background */
+  border: 1px solid rgba(255, 183, 3, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Blur removed from here */
+}
+
+.category-card .sharp-img {
+  width: 100%;
+  height: calc(100% - 50px);
+  object-fit: cover;
+  display: block;
+  filter: none; /* No blur, no grayscale */
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover .sharp-img {
+  transform: scale(1.05);
+}
+
+.category-label {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 5;
+}
+
+.category-card:hover, .category-card.active {
+  transform: translateY(-5px);
+  border: 2px solid #ffb703;
+  box-shadow: 0 10px 30px rgba(255, 183, 3, 0.3);
+}
+
+/* Admin Actions on Hover */
+.category-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.category-card:hover .category-actions {
+  opacity: 1;
+  visibility: visible;
+}
+
+.category-actions button {
+  width: 80px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.edit-btn3 { background: #ffb703; color: #000; }
+.delete-btn3 { background: #ff4d4d; color: #fff; }
+
+/* ================= SCROLL TO TOP (SAME AS HOME) ================= */
+.scroll-wrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border: 2px solid #ffb703;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.arrow-up {
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #ffb703;
+  border-left: 3px solid #ffb703;
+  transform: rotate(45deg);
+  margin-top: 5px;
+}
+
+.scroll-wrapper:hover {
+  background: #ffb703;
+  transform: translateY(-10px);
+}
+
+.scroll-wrapper:hover .arrow-up {
+  border-color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-wrapper { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+  .category-card { width: 280px; height: 220px; }
+  .home-wrapper h1 { font-size: 2.2rem; }
+}
+.edit-btn3 {
+  background: #ffb703;
+  color: #000;
+}
+
+.delete-btn3 {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.category-actions button:hover {
+  transform: scale(1.08);
+}
+
+/* ========================================= */
+
+.category-card img {
+  width: 100%;
+  height: calc(100% - 50px);
+  object-fit: cover;
+  display: block;
+}
+
+.category-label {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border: 2px solid #ffb703;
+    box-shadow: 0 0 15px rgba(255, 183, 3, 0.4);
+
+}
+
+.category-card.active {
+  border: 2px solid #ffb703;
+  box-shadow: 0 0 15px rgba(255, 183, 3, 0.4);
+}
+
+@media (max-width: 768px) {
+  .category-card-wrapper { padding: 40px 20px; gap: 18px; }
+  .category-card { width: 280px; height: 220px; }
+  .category-label { font-size: 0.9rem; }
+}

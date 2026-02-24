@@ -1,0 +1,194 @@
+/* ManageUsers.css - Luxury Admin Theme */
+
+.manage-users-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Background Overlay */
+.admin-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #000; /* Fallback color */
+}
+
+.admin-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(15px) brightness(0.2); /* Deep dark effect */
+    transform: scale(1.1);
+}
+
+/* Glassmorphism Container */
+.admin-glass-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    max-width: 1200px;
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 183, 3, 0.15);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+}
+
+/* Header Section */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 25px;
+}
+
+.admin-tag {
+    color: #ffb703;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.admin-header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Refresh / Action Button */
+.refresh-btn-gold {
+    background: linear-gradient(135deg, #ffb703 0%, #fb8500 100%);
+    color: #000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 20px rgba(251, 133, 0, 0.2);
+}
+
+.refresh-btn-gold:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Table Design */
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.luxury-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #e0e0e0;
+    min-width: 800px;
+}
+
+.luxury-table th {
+    text-align: left;
+    padding: 18px;
+    color: #ffb703;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(255, 183, 3, 0.3);
+}
+
+.luxury-table td {
+    padding: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.user-name-cell {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.id-cell {
+    color: #ffb703;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.luxury-table tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Delete Button (Circular Cross) */
+.delete-cross-btn {
+    background: transparent;
+    color: rgba(255, 77, 77, 0.8);
+    border: 1px solid rgba(255, 77, 77, 0.4);
+    font-size: 1.5rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+.delete-cross-btn:hover {
+    background: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.4);
+}
+
+/* Custom Scrollbar for the table */
+.table-container::-webkit-scrollbar {
+    height: 6px;
+}
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 183, 3, 0.5);
+    border-radius: 10px;
+}
+.table-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .admin-glass-wrapper {
+        padding: 25px;
+    }
+
+    .admin-header h1 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,144 @@
+/* ViewOrder.css – High-End Admin UI */
+
+.order-page {
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Outer Glass Box (Matching Manage Users) */
+.order-main-container {
+    /* Pure black sathe thodo brownish tint (0.8 opacity jethi dark lage) */
+    background: rgba(66, 56, 43, 0.85); 
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    
+    /* Border thodi sharp kari */
+    border: 1px solid rgba(255, 183, 3, 0.3); 
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1350px;
+    
+    /* Shadow thodi vadhari jethi depth aave */
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.9), 
+                inset 0 0 20px rgba(0, 0, 0, 0.5); 
+    margin: 0 auto;
+}
+
+.order-header-section {
+    margin-bottom: 30px;
+}
+
+.access-label {
+    color: #ffb703;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container-title {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+/* The Black Inner Table Box */
+.table-wrapper {
+    background: #0d0d0d; /* Pure Dark for Table BG */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 183, 3, 0.35);
+    overflow: hidden; /* Important: keeps corners rounded */
+}
+
+.luxury-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table Header - Golden Style */
+.luxury-table thead tr {
+    background: rgba(255, 183, 3, 0.12);
+    border-bottom: 2px solid rgba(255, 183, 3, 0.4);
+}
+
+.luxury-table th {
+    padding: 22px 15px;
+    color: #ffb703;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* Table Body Cells */
+.luxury-table td {
+    padding: 18px 15px;
+    color: #d1d1d1;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: middle;
+}
+
+.luxury-table tbody tr:hover {
+    background: rgba(255, 183, 3, 0.04);
+}
+
+.id-cell {
+    color: #ffb703;
+    font-weight: 700;
+}
+
+.user-name-cell {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.contact-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-stack small {
+    color: #888;
+}
+
+.product-item {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.qty-badge {
+    background: rgba(255, 183, 3, 0.2);
+    color: #ffb703;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.total-cell {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.no-data-msg {
+    text-align: center;
+    color: #888;
+    padding: 50px;
+}
+
+/* Desktop pe scroll na aave e mate */
+@media (min-width: 1200px) {
+    .luxury-table {
+        table-layout: auto;
+    }
+}

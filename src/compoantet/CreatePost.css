@@ -1,0 +1,124 @@
+.create-post-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:transparent;
+  padding: 40px 20px;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(14px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 183, 3, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ffffff, #ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.form input, 
+.form textarea, 
+.form select {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 183, 3, 0.2);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form input:focus, 
+.form textarea:focus, 
+.form select:focus {
+  border-color: #ffb703;
+  box-shadow: 0 0 10px rgba(255, 183, 3, 0.2);
+}
+
+.form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.file-input-wrapper {
+  margin-bottom: 20px;
+}
+
+.file-input-wrapper label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffb703;
+  font-size: 0.9rem;
+}
+
+.image-preview {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px dashed rgba(255, 183, 3, 0.5);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn {
+  flex: 2;
+  padding: 14px;
+  background: #ffb703;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #ffc947;
+  transform: translateY(-2px);
+}
+
+/* Chrome, Safari, Edge, Opera mate price input arrows kadhva */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

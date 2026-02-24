@@ -1,0 +1,109 @@
+.add-category-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.category-form-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  padding: 50px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 183, 3, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.category-form-wrapper h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffb703;
+}
+
+.category-form-wrapper input[type="text"] {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.category-form-wrapper input[type="text"]:focus {
+  border-color: #ffb703;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.add-btn {
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  background: #ffb703;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #fff;
+  color: #ffb703;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .category-form-wrapper {
+    width: 90%;
+    padding: 35px 20px;
+  }
+}
+.add-btn,
+.update-btn {
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  background: #ffb703;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.add-btn:hover,
+.update-btn:hover {
+  background: #fff;
+  color: #ffb703;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  background: #ff4d4d;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background: #ff0000;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,213 @@
+.detail-page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* Deep dark background */
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background soft glow */
+.detail-page-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 183, 3, 0.1);
+  filter: blur(100px);
+  top: 10%;
+  left: 10%;
+}
+
+.horizontal-glass-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 850px; /* Width thodi ghatadi */
+  height: 400px;    /* Card height nani kari */
+  
+  /* Glassmorphism from your contact CSS */
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.8),
+    rgba(0, 0, 0, 0.9)
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  
+  border: 1px solid rgba(255, 183, 3, 0.2); /* Golden border tint */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+  animation: fadeUp 0.8s ease-out;
+}
+
+/* Left Section: Image */
+.card-image-section {
+  flex: 1;
+  max-width: 40%;
+  height: 100%;
+  padding: 15px; /* Image ne thodi andar side muki */
+}
+
+.card-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* Image na corner pan round karya */
+  filter: brightness(0.9);
+  transition: 0.5s ease;
+}
+
+.card-image-section:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Right Section: Content */
+.card-content-section {
+  flex: 1.5;
+  padding: 30px 40px; /* Padding barabar set kari */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.category-tag {
+  color: #ffb703; /* Bright golden from contact CSS */
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.detail-title {
+  font-size: 2.2rem; /* Size thodi nani kari */
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #ffffff, #ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-description {
+  color: #bbbbbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Max 3 line dekhase */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Buttons */
+.detail-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-edit {
+  background: #ffb703;
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-edit:hover {
+  background: #ffc947;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 183, 3, 0.3);
+}
+
+.btn-delete {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background: rgba(255, 77, 77, 0.1);
+  border-color: #ff4d4d;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .horizontal-glass-card {
+    flex-direction: column;
+    height: auto;
+    max-width: 400px;
+  }
+  .card-image-section {
+    max-width: 100%;
+    height: 250px;
+  }
+  .detail-title { font-size: 1.8rem; }
+}.detail-price {
+  font-size: 1.8rem;
+  color: #ffb703; /* Golden color match karva mate */
+  font-weight: 700;
+  margin-bottom: 15px;
+}.btn-add-cart {
+  width: 100%;
+  padding: 14px;
+  background: #ffb703; /* Same Golden Color */
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-add-cart:hover {
+  background: #ffc947;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 183, 3, 0.3);
+}
+
+.btn-add-cart:active {
+  transform: translateY(-1px);
+}
+
+/* Admin actions na spacing mate thodu change */
+.detail-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.detail-actions button {
+  flex: 1; /* Admin buttons half-half thai jashe */
+}

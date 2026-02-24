@@ -1,0 +1,91 @@
+/* Pagination.css */
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 15px 30px;
+    max-width: fit-content; /* કન્ટેનર સેન્ટરમાં રહે અને નાનું રહે */
+    
+    /* આછું કાળું બેકગ્રાઉન્ડ કન્ટેનર */
+    background: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(10px); /* પાછળનું બ્લર કરવા */
+    border: 1px solid rgba(255, 215, 0, 0.2); /* ઝાંખી ગોલ્ડન બોર્ડર */
+    border-radius: 50px; /* રાઉન્ડ લુક */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ડ્રોપડાઉન સ્ટાઇલ */
+  .dropdown select {
+    padding: 8px 12px;
+    border-radius: 25px;
+    border: 1px solid #ffcc00; /* Yellow/Gold border */
+    background-color: transparent;
+    color: #ffcc00;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown select option {
+    background-color: #111; /* ડ્રોપડાઉન અંદર કાળું લાગે */
+    color: #ffcc00;
+  }
+  
+  /* બટન અને ઇન્ફો લેઆઉટ */
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .page-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ffcc00; /* Yellow/Gold કલર */
+    color: #000; /* અંદર કાળો ટેક્સ્ટ */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+  }
+  
+  .page-btn:hover:not(:disabled) {
+    background: #fff; /* હોવર પર સફેદ */
+    color: #000;
+    transform: translateY(-2px);
+  }
+  
+  /* ડિસેબલ બટન */
+  .page-btn:disabled {
+    background-color: #333;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  /* પેજ નંબર ટેક્સ્ટ */
+  .page-info {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff; /* સફેદ ટેક્સ્ટ કાળા કન્ટેનર પર */
+    letter-spacing: 1px;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  /* મોબાઈલ રિસ્પોન્સિવ */
+  @media (max-width: 600px) {
+    .pagination-container {
+      flex-direction: column;
+      gap: 15px;
+      border-radius: 20px;
+    }
+  }

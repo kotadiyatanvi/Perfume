@@ -1,0 +1,167 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}select option {
+  background-color: #fff; /* Dropdown menu nu background white */
+  color: #000;            /* Options no text black */
+}
+
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url("../assets/image/newback.webp") center/cover no-repeat;
+  background-attachment: fixed;
+  color: #252323;
+}
+
+/* ================= REGISTRATION PAGE ================= */
+.register-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left side image */
+.register-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.5s ease;
+}
+
+.register-left img:hover {
+  transform: scale(1.05);
+}
+
+/* Right side form */
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.45); /* glass effect */
+  backdrop-filter: blur(12px);
+}
+
+/* Form styling */
+.register-form {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffb703;
+  text-align: center;
+}
+
+.register-header p {
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Input groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, select {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(252, 248, 248, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus, select:focus {
+  border-color: #ffb703;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Error styling */
+.input-error {
+  border-color: #ff4b5c !important;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #ff4b5c;
+}
+
+/* Buttons */
+button {
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn {
+  background: #ffb703;
+  color: #000;
+}
+
+.register-btn:hover {
+  background: #ffc107;
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.login-link span {
+  color: #ffb703;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.login-link span:hover {
+  text-decoration: underline;
+}
+
+/* Modal override if needed */
+.conformation-modal {
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-page {
+    flex-direction: column;
+  }
+  .register-left, .register-right {
+    flex: unset;
+    width: 100%;
+    min-height: 300px;
+  }
+}
+.register label{
+  color: white;
+}
