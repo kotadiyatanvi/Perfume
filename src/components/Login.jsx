@@ -3,7 +3,7 @@ import "./Login.css";
 import tempImg from "../assets/image/per5.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import ConformationModal from "../compoantet/ConformationModal";
+import ConformationModal from "../components/ConformationModal";
 
 const Login = () => {
   const Navigate = useNavigate();

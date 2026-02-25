@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Card from "../compoantet/Card";
+import Card from "../components/Card";
 import ConformationModal from "./ConformationModal";
 import Pagination from "./Pagination"; 
 import "./ProductsPage.css";

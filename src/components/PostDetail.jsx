@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./PostDetail.css";
-import ConformationModal from "../compoantet/ConformationModal";
+import ConformationModal from "../components/ConformationModal";
 import { useNavigate, useParams } from "react-router-dom";
 
 const PostDetail = () => {

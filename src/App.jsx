@@ -1,8 +1,8 @@
 import './App.css'
-import { Navbar } from "./compoantet/Navbar"
-import CreatePost from './compoantet/CreatePost'
+import { Navbar } from "./components/Navbar"
+import CreatePost from './components/CreatePost'
 import Logo from "./assets/moon.png"
-import Card from "./compoantet/Card"
+import Card from "./components/Card"
 import { FaMoon } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa6";
 import { TiHtml5 } from "react-icons/ti";
@@ -12,7 +12,7 @@ import { FaReact } from "react-icons/fa"
 import { IoLogoHtml5 } from "react-icons/io5"
 import { FaCss3 } from "react-icons/fa6"
 import { RouterProvider } from 'react-router-dom'
-import { router } from './compoantet/Route'
+import { router } from './components/Route'
 
 function App() {
   return (

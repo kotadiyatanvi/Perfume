@@ -1,5 +1,5 @@
-import { Navbar } from "../compoantet/Navbar";
-import CreatePost from "../compoantet/CreatePost";
+import { Navbar } from "../components/Navbar";
+import CreatePost from "../components/CreatePost";
 import { FaMoon } from "react-icons/fa6";
 
 export function NewPost() {

@@ -1,4 +1,4 @@
-import Registration from "../compoantet/Registration";
+import Registration from "../components/Registration";
 
 export function Registrationpage(){
   return(

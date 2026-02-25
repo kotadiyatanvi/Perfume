@@ -1,4 +1,4 @@
-import ExplorePost from "../compoantet/ExplorePost"
+import ExplorePost from "../components/ExplorePost"
 
 export function ExplorePostPage() {
     return <>
