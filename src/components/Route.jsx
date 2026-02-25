@@ -6,7 +6,7 @@ import RootLayout from "../pages/RootLayout";
 import PostDetail from "./PostDetail";
 import Authguard from "../guard/Authguard";
 import NotFound from "./NotFound";
-import { ExplorePostPage } from "../pages/ExplorePostPage";
+
 import { Registrationpage } from "../pages/Registrationpage";
 import AddCategory from "./AddCategory";
 import AboutUs from "../components/AboutUs";
